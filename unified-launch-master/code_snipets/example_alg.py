@@ -6,14 +6,14 @@ def main():
     
     i = 0
 
-    left_side_speed = 1
-    right_side_speed = 1
+    left_side_speed = 7
+    right_side_speed = 7
 
-    while i < 1000:
+    while i < 3000:
         #print("X: " + rover.x + " Y: " + rover.y + " Heading: " + rover.heading)
         from sensor_msgs.msg import LaserScan
         for dist in rover.laser_distances:
-            if dist < 0.1:
+            if dist < 0.5:
                 print("TOO CLOSE")
         rover.send_command(left_side_speed, right_side_speed)
         i = i + 1
