@@ -3,6 +3,8 @@ from time import sleep
 
 def main():
     rover = Rover()
+    
+    int k = 0
 
     i = 0
 
@@ -11,6 +13,7 @@ def main():
 
     while i < 1000:
         #print("X: " + rover.x + " Y: " + rover.y + " Heading: " + rover.heading)
+        from sensor_msgs.msg import LaserScan
         for dist in rover.laser_distances:
             if dist < 0.1:
                 print("TOO CLOSE")
