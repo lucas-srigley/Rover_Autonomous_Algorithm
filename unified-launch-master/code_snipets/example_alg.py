@@ -4,8 +4,6 @@ from time import sleep
 def main():
     rover = Rover()
     
-    int k = 0
-
     i = 0
 
     left_side_speed = 1
