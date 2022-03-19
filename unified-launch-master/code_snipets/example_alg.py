@@ -11,7 +11,7 @@ def main():
 
     while i < 3000:
         #print("X: " + rover.x + " Y: " + rover.y + " Heading: " + rover.heading)
-        from sensor_msgs.msg import LaserScan
+
         for dist in rover.laser_distances:
             if dist < 0.5:
                     left_side_speed = 0
